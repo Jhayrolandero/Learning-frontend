@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.background-image{
+    position: relative;
+    background-image: url('../images/galaxy-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8); /* Adjust the opacity here */
+    z-index: -1;
+  }
+
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    background: #0E0B16;
+    min-height: 40px;
+    padding: 15px;
+    z-index: 2;
+}
+
+.left-section{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   margin-right: 20px;
+}
+
+.right-section{
+    color: #E7DFDD;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.button{
+    background: #4717F6;
+    border: 0 none;
+    padding: 8px 7px;
+    color: #E7DFDD;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background .25s ease;
+    cursor: pointer;
+}
+
+.button:hover{
+    background: #A239CA;
+}
+
+
+.sidebar{
+    position: fixed;
+    background: rgba(0, 0, 0, .8);
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    justify-content: space-between;
+    row-gap: 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.icon{
+    height: 80px;
+    width: 80px;
+    background-color: #4717F6;
+    border-style: none;
+    border-radius: 50%;
+    padding-top: 3px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.facebook{
+    object-fit: fill;
+    width: 100%;
+    background-color: transparent;
+}
+
+.github{
+    object-fit: fill;
+    width: 100%;
+    background-color: transparent;
+}
+.instagram{
+    object-fit: fill;
+    width: 100%;
+}
+
+.main{
+    position: absolute;
+    min-width: 700px;
+    min-height: 500px;
+    background-color: rgba(0, 0, 0, .9);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0 none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    z-index: 1;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .8);
+}
+
+.profile{
+    position: relative;
+    background-color: transparent;
+    flex: 1 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    place-items: center;
+}
+
+.profile-picture{
+
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: block;
+    width: 200px; /* Adjust the size as needed */
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white
+
+
+  
+}
+.picture{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.profile-name{
+    background-color: transparent;
+    color: #E7DFDD;
+    font-family: roboto;
+    font-weight: 900;
+    font-size: 30px;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+
+}
+
+.profile-title{
+    background-color: transparent;
+    color: #E7DFDD;
+    font-family: roboto;
+    font-weight: 400;
+}
+
+
+.description{
+    background-color: transparent;
+    flex: 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: space-between;
+    row-gap: 30px;
+    padding: 10px;
+}
+
+.greetings{
+    font-family: Roboto, arial;
+    font-weight: 900;
+    font-size: 50px;
+    flex: 1 0;
+    color: #E7DFDD;
+    
+}
+
+.paragraph{
+    color: #E7DFDD;
+}
+
+.chatbox{
+    position: fixed;
+    min-width: 300px;
+    min-height: 400px;
+    background-color: #0E0B16;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 10px;
+    opacity: .3px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+}
